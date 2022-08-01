@@ -35,6 +35,7 @@ interface DailyWeather {
   temp: Temperature;
   weather: Weather[];
   wind_speed: number;
+  dt: number;
 }
 
 export interface OneWeather {
