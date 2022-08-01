@@ -32,9 +32,3 @@ export default defineComponent({
   components: { CurrentWeather, ...commonIonicComponents },
 });
 </script>
-
-<style scoped>
-.min-width {
-  min-width: 350px;
-}
-</style>
