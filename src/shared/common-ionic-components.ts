@@ -1,0 +1,31 @@
+import {
+  IonCard,
+  IonCardContent,
+  IonCardHeader,
+  IonCardSubtitle,
+  IonCardTitle,
+  IonCol,
+  IonContent,
+  IonGrid,
+  IonHeader,
+  IonPage,
+  IonRow,
+  IonTitle,
+  IonToolbar,
+} from "@ionic/vue";
+
+export default {
+  IonCard,
+  IonCardContent,
+  IonCardHeader,
+  IonCardSubtitle,
+  IonCardTitle,
+  IonCol,
+  IonContent,
+  IonGrid,
+  IonHeader,
+  IonPage,
+  IonRow,
+  IonTitle,
+  IonToolbar,
+};
