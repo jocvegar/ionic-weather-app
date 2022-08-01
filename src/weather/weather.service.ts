@@ -15,9 +15,18 @@ const getWeather = async () => {
   return weather;
 };
 
+const formatTemperature = (value: number, format: "F" | "C") =>
+  `${Math.round(value)}° ${format}`;
+
+const getWeatherImageUrl = (iconName: string, size: "2x" | "4x") => {
+  return `https://openweathermap.org/img/wn/${iconName}@${size}.png`;
+};
+
 export function useWeather() {
   return {
     weather,
     getWeather,
+    formatTemperature,
+    getWeatherImageUrl,
   };
 }
