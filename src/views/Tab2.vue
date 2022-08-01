@@ -11,7 +11,6 @@
           <ion-title size="large">Forecast</ion-title>
         </ion-toolbar>
       </ion-header>
-
       <forecast></forecast>
     </ion-content>
   </ion-page>

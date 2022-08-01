@@ -13,7 +13,7 @@
       </ion-header>
       <ion-grid>
         <ion-row class="ion-justify-content-center">
-          <ion-col size="auto" class="min-width">
+          <ion-col size="auto">
             <current-weather></current-weather>
           </ion-col>
         </ion-row>

@@ -55,12 +55,16 @@ export default defineComponent({
     ...commonIonicComponents,
   },
   setup() {
-    const { weather, getWeather, formatTemperature, getWeatherImageUrl } =
+    const { formatTemperature, getWeather, getWeatherImageUrl, weather } =
       useWeather();
 
     onMounted(getWeather);
 
-    return { weather, formatTemperature, getWeatherImageUrl };
+    return {
+      formatTemperature,
+      getWeatherImageUrl,
+      weather,
+    };
   },
 });
 </script>

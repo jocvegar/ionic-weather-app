@@ -1,6 +1,5 @@
 <template>
   <ion-list v-if="weather?.daily">
-    <ion-list-header> Forecast </ion-list-header>
     <ion-item v-for="(daily, idx) in weather.daily" :key="idx">
       <ion-avatar slot="start" class="weather-background">
         <img :src="getWeatherImageUrl(daily.weather[0].icon, '2x')" />
@@ -27,13 +26,7 @@
 import { defineComponent, onMounted } from "vue";
 import { useWeather } from "./weather.service";
 import commonIonicComponents from "@/shared/common-ionic-components";
-import {
-  IonAvatar,
-  IonItem,
-  IonLabel,
-  IonList,
-  IonListHeader,
-} from "@ionic/vue";
+import { IonAvatar, IonItem, IonLabel, IonList } from "@ionic/vue";
 
 export default defineComponent({
   components: {
@@ -41,16 +34,19 @@ export default defineComponent({
     IonItem,
     IonLabel,
     IonList,
-    IonListHeader,
     ...commonIonicComponents,
   },
   setup() {
-    const { weather, getWeather, formatTemperature, getWeatherImageUrl } =
+    const { formatTemperature, getWeather, getWeatherImageUrl, weather } =
       useWeather();
 
     onMounted(getWeather);
 
-    return { weather, formatTemperature, getWeatherImageUrl };
+    return {
+      formatTemperature,
+      getWeatherImageUrl,
+      weather,
+    };
   },
 });
 </script>
